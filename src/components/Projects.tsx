@@ -9,7 +9,7 @@ const projects: Project[] = [
     title: 'FlowBoard',
     description: 'Notion-style collaboration tool with React, Node.js, Docker, Kubernetes.',
     image: '/projects/flowboard.jpg',
-    link: 'https://github.com/alexvlasov182/flowboard',
+    link: 'https://flowboard-indol.vercel.app/',
   },
   {
     title: 'Newsletter',
