@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Body + fonts  */
+/* Base body — font loaded in layout.tsx */
+:root {
+  color-scheme: light;
+}
+
+/* Light mode */
 body {
-  @apply bg-bgLight text-textLight font-sans leading-relaxed tracking-wide;
+  @apply bg-bgLight text-textLight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Dark mode */
@@ -12,7 +19,7 @@ body {
   @apply bg-bgDark text-textDark;
 }
 
-/* Headers */
+/* Typography */
 h1,
 h2,
 h3,
@@ -22,7 +29,16 @@ h6 {
   @apply font-heading;
 }
 
-/* Card style */
+/* Card */
 .card {
-  @apply p-6 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105;
+  @apply rounded-xl shadow-card bg-surfaceLight dark:bg-surfaceDark p-6 transition-all duration-300;
+  will-change: transform, box-shadow;
+}
+
+/* Nav indicator */
+.nav-indicator {
+  @apply w-8 h-px bg-gray-300 dark:bg-gray-600 transition-all duration-300;
+}
+.nav-item:hover .nav-indicator {
+  @apply w-16;
 }

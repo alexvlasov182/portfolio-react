@@ -2,30 +2,36 @@
 module.exports = {
   darkMode: 'class',
   content: [
-    './src/app/**/*.{ts,tsx}',
-    './src/components/**/*.{ts,tsx}',
-    './src/pages/**/*.{ts,tsx}',
+    './src/app/**/*.{ts,tsx,js,jsx}',
+    './src/components/**/*.{ts,tsx,js,jsx}',
+    './src/pages/**/*.{ts,tsx,js,jsx}',
   ],
   theme: {
     extend: {
       colors: {
-        bgLight: '#FAF9F6',
-        textLight: '#1E1E2D',
-        secondaryLight: '#4A4A4A',
-        bgDark: '#1E1E2D',
-        textDark: '#F7F1E8',
-        secondaryDark: '#C0C0C0',
-        primary: '#6C5DD3',
-        primaryDark: '#9B5DE5',
-        secondaryAccent: '#FF758F',
-        secondaryAccentDark: '#FF4D6D',
-        cardLight: '#FFF8E7',
-        cardDark: '#2E2E3A',
+        bgLight: '#F5F5F7',
+        surfaceLight: '#FFFFFF',
+        textLight: '#1D1D1F',
+        mutedLight: '#6E6E73',
+
+        bgDark: '#0A0A0A',
+        surfaceDark: '#0F1724',
+        textDark: '#ECECEC',
+        mutedDark: '#A1A1A6',
+
+        accent: '#6C5DD3',
+        accentCold: '#3B82F6',
+      },
+      animation: {
+        'spin-slow': 'spin 1s linear',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Geist', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
       },
+      borderRadius: { lg: '16px', xl: '20px' },
+      boxShadow: { card: '0 6px 30px rgba(2,6,23,0.12)' },
+      maxWidth: { layout: '1280px' },
     },
   },
   plugins: [],

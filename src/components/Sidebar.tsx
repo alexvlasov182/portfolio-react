@@ -1,30 +1,60 @@
-export default function Sidebar() {
-  return (
-    <aside className="flex flex-col h-full">
-      {/* Header */}
-      <div>
-        <h1 className="text-4xl font-bold sm:text-5xl">Oleksandr Vlasov</h1>
-        <h2 className="mt-3 text-lg font-medium sm:text-xl">Frontend Developer</h2>
-        <p className="mt-4 max-w-xs font-heading leading-relaxed">
-          I build accessible production web and mobile applications
-        </p>
-      </div>
+'use client';
+import { motion } from 'framer-motion';
+import { lineGrow } from '../lib/microAnimations';
+import { FaLinkedin, FaGithub, FaYoutube } from 'react-icons/fa';
+import ThemeSwitcher from './ThemeSwitcher';
 
-      {/* Nav */}
-      <nav className="mt-16 flex flex-col space-y-3">
-        {['about', 'experience', 'projects'].map((section) => (
-          <a
+export default function Sidebar() {
+  const sections = ['about', 'experience', 'projects'];
+  const socialLinks = [
+    { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/oleksandr-vlasov-9969ab19b/' },
+    { icon: <FaGithub />, link: 'https://github.com/alexvlasov182' },
+  ];
+
+  return (
+    <motion.aside
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0, transition: { duration: 0.6 } }}
+      className="flex flex-col"
+    >
+      <h1 className="text-5xl font-bold leading-tight">Oleksandr Vlasov</h1>
+      <h2 className="text-xl mt-3 opacity-80">Frontend Developer</h2>
+
+      <p className="mt-6 max-w-xs text-base opacity-80">
+        I build accessible, production-ready web & mobile applications.
+      </p>
+
+      <nav className="mt-14 flex flex-col gap-4">
+        {sections.map((section) => (
+          <motion.a
             key={section}
             href={`#${section}`}
-            className="group flex items-center transition-colors duration-200 hover:text-slate-200"
+            className="group flex items-center hover:text-accent transition-colors"
           >
-            <span className="w-8 h-px bg-slate-600 group-hover:w-16 transition-all"></span>
-            <span className="ml-4 text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+            <motion.span
+              className="w-8 h-px bg-gray-400 dark:bg-gray-600 origin-left"
+              variants={lineGrow}
+            ></motion.span>
+            <span className="ml-4 text-xs font-bold uppercase tracking-widest opacity-70 group-hover:opacity-100">
+              {section}
             </span>
-          </a>
+          </motion.a>
         ))}
       </nav>
-    </aside>
+
+      <div className="mt-10 flex gap-4">
+        {socialLinks.map((s, i) => (
+          <a
+            key={i}
+            href={s.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl hover:text-accent transition-colors"
+          >
+            {s.icon}
+          </a>
+        ))}
+      </div>
+    </motion.aside>
   );
 }
