@@ -7,8 +7,8 @@ import { IoDocumentText } from 'react-icons/io5';
 export default function Sidebar() {
   const sections = ['about', 'tech-stack', 'experience', 'projects'];
   const socialLinks = [
-    { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/oleksandr-vlasov-9969ab19b/' },
     { icon: <FaGithub />, link: 'https://github.com/alexvlasov182' },
+    { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/oleksandr-vlasov-9969ab19b/' },
     {
       icon: <IoDocumentText />,
       link: 'https://drive.google.com/file/d/1Ku-wEbmqIELXs5KOpKAppoOkL2aWdt5b/view?usp=sharing',
