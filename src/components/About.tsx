@@ -21,7 +21,7 @@ export default function About() {
 
       <motion.div className="space-y-4" variants={slideInLeft}>
         <p className="text-lg leading-relaxed">
-          I'm a frontend developer who loves building things that{' '}
+          I&apos;m a frontend developer who loves building things that{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">actually work</span>.
         </p>
 
@@ -46,7 +46,7 @@ export default function About() {
             <li className="flex items-start">
               <span className="text-primary dark:text-primaryDark mr-2">→</span>
               <span>
-                Building mobile apps that don't crash{' '}
+                Building mobile apps that don&apos;t crash{' '}
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   (React Native, 85% crash reduction)
                 </span>
@@ -65,7 +65,7 @@ export default function About() {
         </div>
 
         <p className="leading-relaxed">
-          Right now I'm diving deeper into{' '}
+          Right now I&apos;m diving deeper into{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">
             cloud technologies
           </span>{' '}

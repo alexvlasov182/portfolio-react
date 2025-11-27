@@ -2,6 +2,7 @@ import Sidebar from '../components/Sidebar';
 import About from '../components/About';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
+import TechStack from '@/components/TechStack';
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
 
       <main className="w-full lg:w-[60%] space-y-32">
         <About />
+        <TechStack />
         <Experience />
         <Projects />
       </main>

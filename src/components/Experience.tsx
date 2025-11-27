@@ -7,14 +7,15 @@ type Experience = { title: string; description: string[]; company: string; city:
 
 const experience: Experience[] = [
   {
-    title: 'React & React Native Engineer',
+    title: 'Junior React & React Native Developer',
     company: 'RoyalZSoftware',
     city: 'Weilheim, Bavaria, Germany',
     description: [
-      'Architected and delivered course marketplace platform (Next.js)',
-      'Built company landing page and MDX-powered blog, taking full ownership of frontend architecture and deployment',
-      'Developed React Native calendar feature with advanced sorting/filtering, reducing user task completion time by 40%',
-      'Reduced app crashes by 85% through UI refinements, loading states, and comprehensive testing',
+      'Delivered course marketplace (Stripe + Mux + Next.js) end-to-end',
+      'Built MDX blog & landing page - full ownership of frontend',
+      'Developed React Native calendar → task completion –40%',
+      'Reduced crash rate –85% via UI optimization + testing',
+      'Helped with DB + Docker containerization',
     ],
   },
   {
@@ -22,10 +23,10 @@ const experience: Experience[] = [
     company: 'QPLix',
     city: 'Munich, Bavaria, Germany',
     description: [
-      'Designed and executed exploratory tests to validate new features and bug fixes.',
-      'Automated UI tests using TypeScript & TestCafe to streamline regression testing.',
-      'Created clear test documentation and filed bug reports in collaboration with dev teams.',
-      'Assisted rollout management by reviewing builds and supporting release approvals.',
+      'Automated UI tests with TypeScript & TestCafe → cut manual testing by 60%',
+      'Built test suites for financial apps ensuring compliance & stability',
+      'Collaborated with DevOps on CI/CD pipeline optimization',
+      'Supported developers on bug triage, test coverage & releases',
     ],
   },
 ];
