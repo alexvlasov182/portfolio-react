@@ -11,8 +11,8 @@ const experience: Experience[] = [
     company: 'RoyalZSoftware',
     city: 'Weilheim, Bavaria, Germany',
     description: [
-      'Delivered course marketplace (Stripe + Mux + Next.js) end-to-end',
-      'Built MDX blog & landing page - full ownership of frontend',
+      'Delivered course marketplace ent-to-end (Stripe + Mux + Next.js)',
+      'Built MDX blog & landing page',
       'Developed React Native calendar → task completion –40%',
       'Reduced crash rate –85% via UI optimization + testing',
       'Helped with DB + Docker containerization',

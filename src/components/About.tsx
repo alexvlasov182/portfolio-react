@@ -21,13 +21,16 @@ export default function About() {
 
       <motion.div className="space-y-4" variants={slideInLeft}>
         <p className="text-lg leading-relaxed">
-          I&apos;m a frontend developer who loves building things that{' '}
-          <span className="font-semibold text-primary dark:text-primaryDark">actually work</span>.
+          I&apos;m a frontend developer focused on shipping real,{' '}
+          <span className="font-semibold text-primary dark:text-primaryDark">
+            production-ready products
+          </span>
+          .
         </p>
 
         <p className="leading-relaxed">
-          Started coding in 2020, moved from Ukraine to Munich in 2022. Spent the last 2 years
-          shipping production apps at <span className="font-medium">RoyalZSoftware</span> and{' '}
+          I started coding in 2020, moved from Ukraine to Munich in 2022, and spent the last two
+          years building and scaling apps at <span className="font-medium">RoyalZSoftware</span> and{' '}
           <span className="font-medium">QPLIX</span>.
         </p>
 
@@ -37,7 +40,7 @@ export default function About() {
             <li className="flex items-start">
               <span className="text-primary dark:text-primaryDark mr-2">→</span>
               <span>
-                Taking ideas from design to deployment{' '}
+                Taking features from design to deployment{' '}
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   (Next.js, React, TypeScript)
                 </span>
@@ -55,9 +58,9 @@ export default function About() {
             <li className="flex items-start">
               <span className="text-primary dark:text-primaryDark mr-2">→</span>
               <span>
-                Setting up infrastructure that scales{' '}
+                Setting up scalable infrastructure{' '}
                 <span className="text-sm text-gray-600 dark:text-gray-400">
-                  (Docker, AWS, CI/CD)
+                  (Docker, AWS, CI/CD, Golang)
                 </span>
               </span>
             </li>
@@ -65,17 +68,16 @@ export default function About() {
         </div>
 
         <p className="leading-relaxed">
-          Right now I&apos;m diving deeper into{' '}
+          Currently expanding into{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">
-            cloud technologies
+            full-stack & cloud development
           </span>{' '}
-          because I realized I enjoy the deployment and infrastructure side as much as writing React
-          components.
+          - because I enjoy delivering not only UI, but also the systems behind it.
         </p>
 
         <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
           <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-            Open to: Frontend, Full-Stack, and DevOps roles in Munich
+            Open to: Frontend · Full-Stack · DevOps roles - Munich or Hybrid
           </p>
         </div>
       </motion.div>

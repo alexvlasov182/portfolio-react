@@ -3,17 +3,18 @@ import { motion } from 'framer-motion';
 import { fadeInUp } from '../lib/microAnimations';
 
 const techs = [
-  'React',
-  'Next.js',
+  'JavaScript',
   'TypeScript',
+  'React',
   'React Native',
-  'Node.js',
-  'AWS',
-  'Docker',
-  'PostgreSQL',
-  'CI/CD',
+  'Next.js',
   'Stripe',
   'Mux',
+  'Node.js',
+  'PostgreSQL',
+  'AWS',
+  'Docker',
+  'CI/CD',
 ];
 
 export default function TechStack() {
