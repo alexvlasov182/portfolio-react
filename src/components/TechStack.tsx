@@ -40,7 +40,7 @@ export default function TechStack() {
           {techs.map((tech) => (
             <motion.span
               key={tech}
-              className="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors cursor-default"
+              className="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-accent transition-colors hover:text-white dark:hover:bg-accent  cursor-default"
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
