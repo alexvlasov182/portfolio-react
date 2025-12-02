@@ -1,11 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
-import { lineGrow } from '../lib/microAnimations';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { IoDocumentText } from 'react-icons/io5';
+import useActiveSection from '../hooks/useActiveSection';
 
 export default function Sidebar() {
   const sections = ['about', 'tech-stack', 'experience', 'projects'];
+  const active = useActiveSection(sections);
+
   const socialLinks = [
     { icon: <FaGithub />, link: 'https://github.com/alexvlasov182' },
     { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/oleksandr-vlasov-9969ab19b/' },
@@ -29,26 +31,36 @@ export default function Sidebar() {
       <p className="mt-6 max-w-xs text-base opacity-80">
         Exploring:{' '}
         <span className="font-semibold text-primary dark:text-primaryDark">
-          Mobile · Cloud · Infrastructure (learning towards full-stack)
-        </span>{' '}
+          Backend · Cloud · Infrastructure
+        </span>
       </p>
 
       <nav className="mt-14 flex flex-col gap-4">
-        {sections.map((section) => (
-          <motion.a
-            key={section}
-            href={`#${section}`}
-            className="group flex items-center hover:text-accent transition-colors"
-          >
-            <motion.span
-              className="w-8 h-px bg-gray-400 dark:bg-gray-600 origin-left"
-              variants={lineGrow}
-            ></motion.span>
-            <span className="ml-4 text-xs font-bold uppercase tracking-widest opacity-70 group-hover:opacity-100">
-              {section}
-            </span>
-          </motion.a>
-        ))}
+        {sections.map((section) => {
+          const isActive = active === section;
+          return (
+            <motion.a
+              key={section}
+              href={`#${section}`}
+              className={`group flex items-center transition-colors ${
+                isActive ? 'text-accent' : 'hover:text-accent'
+              }`}
+            >
+              <motion.span
+                animate={{ width: isActive ? 60 : 20 }}
+                className="h-px bg-gray-400 dark:bg-gray-600 origin-left"
+                transition={{ duration: 0.3 }}
+              />
+              <span
+                className={`ml-4 text-xs font-bold uppercase tracking-widest ${
+                  isActive ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'
+                }`}
+              >
+                {section}
+              </span>
+            </motion.a>
+          );
+        })}
       </nav>
 
       <div className="mt-10 flex gap-4">
