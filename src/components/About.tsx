@@ -84,3 +84,5 @@ export default function About() {
     </motion.section>
   );
 }
+
+console.log('Hello World');
