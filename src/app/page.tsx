@@ -1,3 +1,5 @@
+'use client';
+
 import Sidebar from '../components/Sidebar';
 import About from '../components/About';
 import Experience from '../components/Experience';
