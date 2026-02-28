@@ -1,31 +1,49 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { IoDocumentText } from 'react-icons/io5';
+import { useMemo } from 'react';
 import useActiveSection from '../hooks/useActiveSection';
 
-export default function Sidebar() {
-  const sections = ['about', 'tech-stack', 'experience', 'projects'];
-  const active = useActiveSection(sections);
+const sections = ['about', 'tech-stack', 'experience', 'projects'] as const;
+type Section = (typeof sections)[number];
 
-  const socialLinks = [
-    { icon: <FaGithub />, link: 'https://github.com/alexvlasov182' },
-    { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/oleksandr-vlasov-9969ab19b/' },
-    {
-      icon: <IoDocumentText />,
-      link: 'https://drive.google.com/file/d/1Ku-wEbmqIELXs5KOpKAppoOkL2aWdt5b/view?usp=sharing',
-    },
-  ];
+export default function Sidebar() {
+  const active = useActiveSection(sections as readonly Section[]);
+
+  const socialLinks = useMemo(
+    () => [
+      {
+        icon: <FaGithub />,
+        link: 'https://github.com/alexvlasov182',
+        label: 'GitHub profile',
+      },
+      {
+        icon: <FaLinkedin />,
+        link: 'https://www.linkedin.com/in/oleksandr-vlasov-9969ab19b/',
+        label: 'LinkedIn profile',
+      },
+      {
+        icon: <IoDocumentText />,
+        link: 'https://drive.google.com/file/d/1Ku-wEbmqIELXs5KOpKAppoOkL2aWdt5b/view?usp=sharing',
+        label: 'Resume',
+      },
+    ],
+    [],
+  );
 
   return (
     <motion.aside
       initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0, transition: { duration: 0.6 } }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
       className="flex flex-col"
     >
       <h1 className="text-5xl font-bold leading-tight">Oleksandr Vlasov</h1>
+
       <h2 className="text-xl mt-3 opacity-80">
-        Frontend React/Next.js Developer - building production apps with measurable results.
+        Aerospace Engineering MSc · QA & Test Automation · Production-Ready Systems
       </h2>
 
       <p className="mt-6 max-w-xs text-base opacity-80">
@@ -35,9 +53,10 @@ export default function Sidebar() {
         </span>
       </p>
 
-      <nav className="mt-14 flex flex-col gap-4">
+      <nav className="mt-14 flex flex-col gap-4" aria-label="Section navigation">
         {sections.map((section) => {
           const isActive = active === section;
+
           return (
             <motion.a
               key={section}
@@ -48,9 +67,10 @@ export default function Sidebar() {
             >
               <motion.span
                 animate={{ width: isActive ? 60 : 20 }}
-                className="h-px bg-gray-400 dark:bg-gray-600 origin-left"
                 transition={{ duration: 0.3 }}
+                className="h-px bg-gray-400 dark:bg-gray-600 origin-left"
               />
+
               <span
                 className={`ml-4 text-xs font-bold uppercase tracking-widest ${
                   isActive ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'
@@ -64,15 +84,16 @@ export default function Sidebar() {
       </nav>
 
       <div className="mt-10 flex gap-4">
-        {socialLinks.map((s, i) => (
+        {socialLinks.map(({ icon, link, label }) => (
           <a
-            key={i}
-            href={s.link}
+            key={label}
+            href={link}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={label}
             className="text-2xl hover:text-accent transition-colors"
           >
-            {s.icon}
+            {icon}
           </a>
         ))}
       </div>

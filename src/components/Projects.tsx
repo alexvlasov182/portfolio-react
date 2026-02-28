@@ -6,7 +6,8 @@ type Project = { title: string; description: string; image: string; link?: strin
 const projects: Project[] = [
   {
     title: 'FlowBoard',
-    description: 'Notion-style collaboration tool with React, Node.js, Docker, Kubernetes.',
+    description:
+      'Notion-style collaboration tool with React, Node.js, Docker, AWS, EC2, JWT Token, REST API.',
     image: '/projects/flowboard.jpg',
     link: 'https://flowboard-indol.vercel.app/',
   },
@@ -18,10 +19,10 @@ const projects: Project[] = [
     link: 'https://royalzsoftware.de/newsletter',
   },
   {
-    title: 'Course Marketplace',
-    description: 'Udemy-like platform with Stripe, Mux, PostgreSQL, Docker.',
-    image: '/projects/courses-page.png',
-    link: 'https://royalzsoftware.de/courses',
+    title: 'RoyalZSoftware',
+    description: 'Landing Page built with Next.js.',
+    image: '/projects/landing.png',
+    link: 'https://royalzsoftware.de',
   },
 ];
 

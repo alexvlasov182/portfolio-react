@@ -1,11 +1,23 @@
 'use client';
 import { motion } from 'framer-motion';
-import { fadeInUp } from '../lib/microAnimations';
 import { FaMapMarkerAlt, FaBuilding } from 'react-icons/fa';
+import { fadeInUp } from '../lib/microAnimations';
 
 type Experience = { title: string; description: string[]; company: string; city: string };
 
 const experience: Experience[] = [
+  {
+    title: 'Open Source Contributor',
+    company: 'Fedora Project',
+    city: 'Munich, Bavaria, Germany',
+    description: [
+      'Contributed to Fedora web tooling using Vue.js and Node.js',
+      'Developed RTL language validation scripts for localization workflows',
+      'Implemented translation coverage checks (e.g. blocking <80% translated locales from production)',
+      'Participated in code reviews and open-source collaboration processes',
+      'Worked with internationalization (i18n) and frontend infrastructure',
+    ],
+  },
   {
     title: 'Junior React & React Native Developer',
     company: 'RoyalZSoftware',
@@ -14,17 +26,17 @@ const experience: Experience[] = [
       'Delivered course marketplace end-to-end (Stripe + Mux + Next.js)',
       'Built MDX blog & landing page',
       'Developed React Native calendar → task completion –40%',
-      'Reduced crash rate –85% via UI optimization + testing',
+      'Reduced crash rate –85% via UI optimization & testing',
       'Helped with DB + Docker containerization',
     ],
   },
   {
-    title: 'Automation Quality Assurance',
+    title: 'Quality Assurance Automation Engineer',
     company: 'QPLix',
     city: 'Munich, Bavaria, Germany',
     description: [
-      'Automated UI tests with TypeScript & TestCafe → cut manual testing by 60%',
-      'Built test suites for financial apps ensuring compliance & stability',
+      'Automated UI testing workflows → manual QA time –60%',
+      'Built test suites for financial software ensuring compliance & stability',
       'Collaborated with DevOps on CI/CD pipeline optimization',
       'Supported developers on bug triage, test coverage & releases',
     ],

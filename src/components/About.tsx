@@ -13,9 +13,11 @@ export const slideInLeft = {
 
 export default function About() {
   const points = [
-    'Taking features from design to deployment (Next.js, React, TypeScript)',
-    'Building mobile apps that don’t crash (React Native, 85% crash reduction)',
-    'Setting up scalable infrastructure (Docker, AWS, CI/CD, Golang)',
+    'Designing and implementing automated QA workflows',
+    'Reducing manual testing through CI/CD integration',
+    'Ensuring system reliability in Dockerized environments',
+    'Collaborating with developers and DevOps teams to maintain production-ready software',
+    'Full-stack project deployment from design to production-ready systems (React, Node.js, PostgreSQL, Docker, AWS EC2)',
   ];
 
   return (
@@ -36,21 +38,22 @@ export default function About() {
 
       <motion.div className="space-y-4">
         <p className="text-lg leading-relaxed">
-          I&apos;m a frontend developer focused on shipping real,{' '}
+          I&apos;m a{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">
-            production-ready products
-          </span>
-          .
+            Software Test Engineer
+          </span>{' '}
+          with hands-on experience in QA Automation and production-ready systems.
         </p>
 
         <p className="leading-relaxed">
-          Based in Munich with 2+ years of experience delivering and scaling web and mobile
-          applications at <span className="font-medium">RoyalZSoftware</span> and{' '}
-          <span className="font-medium">QPLIX</span>.
+          Master’s graduate in Aerospace Engineering with practical experience in software quality,
+          test automation, and building production-ready systems. Skilled in Linux, Docker, and
+          CI/CD pipelines, I combine engineering discipline with hands-on QA and development
+          experience.
         </p>
 
         <div className="pl-4 border-l-4 border-primary/30 dark:border-primaryDark/30">
-          <p className="font-medium mb-2">What I do best:</p>
+          <p className="font-medium mb-2">Proven experience in:</p>
           <ul className="space-y-2">
             {points.map((p, i) => (
               <motion.li
@@ -68,17 +71,9 @@ export default function About() {
           </ul>
         </div>
 
-        <p className="leading-relaxed mt-4">
-          Currently expanding into{' '}
-          <span className="font-semibold text-primary dark:text-primaryDark">
-            full-stack & cloud development
-          </span>{' '}
-          — with Node.js, Golang, AWS, and Docker.
-        </p>
-
         <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
           <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-            Open to: Frontend · Full-Stack · DevOps roles — Munich or Hybrid
+            Open to: Aerospace production · Systems validation · QA automation - Munich or Hybrid
           </p>
         </div>
       </motion.div>
