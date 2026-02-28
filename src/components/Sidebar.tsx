@@ -10,7 +10,8 @@ const sections = ['about', 'tech-stack', 'experience', 'projects'] as const;
 type Section = (typeof sections)[number];
 
 export default function Sidebar() {
-  const active = useActiveSection(sections as readonly Section[]);
+  // Convert readonly tuple to mutable string[] for the hook
+  const active = useActiveSection([...sections] as string[]);
 
   const socialLinks = useMemo(
     () => [
