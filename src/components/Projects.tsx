@@ -12,6 +12,12 @@ const projects: Project[] = [
     link: 'https://flowboard-indol.vercel.app/',
   },
   {
+    title: 'Fedora Project',
+    description: 'Contributed to Fedora web tooling using Vue.js and Node.js',
+    image: '/projects/fedora.png',
+    link: 'https://www.fedoraproject.org/',
+  },
+  {
     title: 'Newsletter Platform',
     description:
       'Full-stack newsletter service with subscriber management and analytics dashboard.',
