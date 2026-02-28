@@ -27,7 +27,7 @@ export default function Sidebar() {
       },
       {
         icon: <IoDocumentText />,
-        link: 'https://drive.google.com/file/d/1Ku-wEbmqIELXs5KOpKAppoOkL2aWdt5b/view?usp=sharing',
+        link: 'https://drive.google.com/file/d/17uh7c9sqms-uZhRG0e1T5mTV4t452mlb/view?usp=sharing',
         label: 'Resume',
       },
     ],
