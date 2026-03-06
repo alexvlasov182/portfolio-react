@@ -11,15 +11,15 @@ export const slideInLeft = {
   },
 };
 
-export default function About() {
-  const points = [
-    'Designing and implementing automated QA workflows',
-    'Reducing manual testing through CI/CD integration',
-    'Ensuring system reliability in Dockerized environments',
-    'Collaborating with developers and DevOps teams to maintain production-ready software',
-    'Full-stack project deployment from design to production-ready systems (React, Node.js, PostgreSQL, Docker, AWS EC2)',
-  ];
+const points = [
+  'Designing and implementing automated QA workflows',
+  'Reducing manual testing through CI/CD integration',
+  'Ensuring system reliability in Dockerized environments',
+  'Collaborating with developers and DevOps teams to maintain production-ready software',
+  'Full-stack project deployment from design to production (React, Node.js, PostgreSQL, Docker, AWS EC2)',
+];
 
+export default function About() {
   return (
     <motion.section
       id="about"
@@ -40,16 +40,15 @@ export default function About() {
         <p className="text-lg leading-relaxed">
           I&apos;m a{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">
-            Software Test Engineer
+            QA Automation Engineer
           </span>{' '}
-          with hands-on experience in QA Automation and production-ready systems.
+          with hands-on experience in QA automation and production-ready systems.
         </p>
 
         <p className="leading-relaxed">
-          Master’s graduate in Aerospace Engineering with practical experience in software quality,
-          test automation, and building production-ready systems. Skilled in Linux, Docker, and
-          CI/CD pipelines, I combine engineering discipline with hands-on QA and development
-          experience.
+          Master&apos;s graduate in Aerospace Engineering with practical experience in software
+          quality, test automation, and full-stack development. Skilled in Linux, Docker, and CI/CD
+          pipelines, I combine engineering discipline with hands-on QA and development experience.
         </p>
 
         <div className="pl-4 border-l-4 border-primary/30 dark:border-primaryDark/30">
@@ -64,7 +63,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.6, ease: 'easeOut' }}
               >
-                <span className="text-primary dark:text-primaryDark mr-2">→</span>
+                <span className="text-primary dark:text-primaryDark mr-2 mt-0.5 shrink-0">→</span>
                 {p}
               </motion.li>
             ))}
@@ -73,7 +72,7 @@ export default function About() {
 
         <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
           <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-            Open to: Aerospace production · Systems validation · QA automation - Munich or Hybrid
+            Open to: Aerospace production · Systems validation · QA automation — Munich or Hybrid
           </p>
         </div>
       </motion.div>

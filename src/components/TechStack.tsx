@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 const techs = [
   'QA Automation',
   'Linux',
+  'Python',
   'Docker',
   'CI/CD',
   'JavaScript',

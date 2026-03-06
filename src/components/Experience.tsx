@@ -23,11 +23,10 @@ const experience: Experience[] = [
     company: 'RoyalZSoftware',
     city: 'Weilheim, Bavaria, Germany',
     description: [
-      'Delivered course marketplace end-to-end (Stripe + Mux + Next.js)',
+      'Implemented Google Maps integration in React Native (location features, map rendering)',
       'Built MDX blog & landing page',
       'Developed React Native calendar → task completion –40%',
       'Reduced crash rate –85% via UI optimization & testing',
-      'Helped with DB + Docker containerization',
     ],
   },
   {

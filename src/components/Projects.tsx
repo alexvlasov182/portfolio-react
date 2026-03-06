@@ -5,28 +5,23 @@ type Project = { title: string; description: string; image: string; link?: strin
 
 const projects: Project[] = [
   {
-    title: 'FlowBoard',
-    description:
-      'Notion-style collaboration tool with React, Node.js, Docker, AWS, EC2, JWT Token, REST API.',
-    image: '/projects/flowboard.jpg',
-    link: 'https://flowboard-indol.vercel.app/',
-  },
-  {
     title: 'Fedora Project',
-    description: 'Contributed to Fedora web tooling using Vue.js and Node.js',
+    description:
+      "Open-source contributor to Fedora's web infrastructure - built RTL validation scripts, translation coverage checks, and i18n tooling using Vue.js and Node.js.",
     image: '/projects/fedora.png',
     link: 'https://www.fedoraproject.org/',
   },
   {
-    title: 'Newsletter Platform',
+    title: 'FlowBoard',
     description:
-      'Full-stack newsletter service with subscriber management and analytics dashboard.',
-    image: '/projects/newsletter.png',
-    link: 'https://royalzsoftware.de/newsletter',
+      'Production-ready note-taking platform built end-to-end - JWT auth, REST API with Swagger docs, fully containerized with Docker, deployed on AWS EC2.',
+    image: '/projects/flowboard.jpg',
+    link: 'https://flowboard-indol.vercel.app/',
   },
   {
     title: 'RoyalZSoftware',
-    description: 'Landing Page built with Next.js.',
+    description:
+      'Company landing page + MDX blog built from scratch with Next.js and TypeScript - responsive design, optimized performance, production deployment.',
     image: '/projects/landing.png',
     link: 'https://royalzsoftware.de',
   },
