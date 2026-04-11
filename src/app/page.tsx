@@ -9,7 +9,7 @@ import TechStack from '@/components/TechStack';
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row gap-12 py-20">
-      <aside className="hidden lg:block sticky top-20 w-[40%] h-[calc(100vh-5rem)]">
+      <aside className="lg:sticky lg:top-20 w-full lg:w-[40%] lg:h-[calc(100vh-5rem)]">
         <Sidebar />
       </aside>
 
