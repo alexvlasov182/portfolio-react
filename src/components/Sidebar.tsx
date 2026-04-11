@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaGitlab } from 'react-icons/fa';
 import { IoDocumentText } from 'react-icons/io5';
 import { useMemo } from 'react';
 import useActiveSection from '../hooks/useActiveSection';
@@ -15,6 +15,11 @@ export default function Sidebar() {
 
   const socialLinks = useMemo(
     () => [
+      {
+        icon: <FaGitlab />,
+        link: 'https://gitlab.com/dashboard/home',
+        label: 'GitLab profile',
+      },
       {
         icon: <FaGithub />,
         link: 'https://github.com/alexvlasov182',
