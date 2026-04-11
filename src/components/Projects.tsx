@@ -5,23 +5,30 @@ type Project = { title: string; description: string; image: string; link?: strin
 
 const projects: Project[] = [
   {
-    title: 'Fedora Project',
+    title: 'Robot Payment API',
     description:
-      "Open-source contributor to Fedora's web infrastructure - built RTL validation scripts, translation coverage checks, and i18n tooling using Vue.js and Node.js.",
+      'RESTful payment API for robot terminals. FastAPI, Pydantic v2 validation, Dockerized, 9 pytest tests covering success and edge cases. Clean feature-based router structure. Stack: FastAPI, Pydantic v2, Docker, pytest, httpx',
+    image: '/projects/robot-api.jpg',
+    link: 'https://gitlab.com/alexvlasov182/rest-api-testing',
+  },
+  {
+    title: 'Fedora i18n Tooling',
+    description:
+      'RTL validation scripts and translation coverage checks for Fedoras web infrastructure. Blocked under-translated locales from reaching production. Stack: Vue.js, Node.js',
     image: '/projects/fedora.png',
     link: 'https://www.fedoraproject.org/',
   },
   {
     title: 'FlowBoard',
     description:
-      'Production-ready note-taking platform built end-to-end - JWT auth, REST API with Swagger docs, fully containerized with Docker, deployed on AWS EC2.',
+      'Production-ready note-taking API. JWT auth, REST API with Swagger docs, Dockerized with Docker Compose, deployed on AWS EC2. Stack: Node.js, Express, PostgreSQL, Docker, AWS',
     image: '/projects/flowboard.jpg',
     link: 'https://flowboard-indol.vercel.app/',
   },
   {
     title: 'RoyalZSoftware',
     description:
-      'Company landing page + MDX blog built from scratch with Next.js and TypeScript - responsive design, optimized performance, production deployment.',
+      'Company site and MDX blog built with Next.js and TypeScript. Production deployment, responsive design. Stack: Next.js, TypeScript',
     image: '/projects/landing.png',
     link: 'https://royalzsoftware.de',
   },

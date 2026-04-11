@@ -19,7 +19,7 @@ const experience: Experience[] = [
     ],
   },
   {
-    title: 'Junior React & React Native Developer',
+    title: 'Junior Developer',
     company: 'RoyalZSoftware',
     city: 'Weilheim, Bavaria, Germany',
     description: [

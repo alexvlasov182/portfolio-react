@@ -27,7 +27,7 @@ export default function Sidebar() {
       },
       {
         icon: <IoDocumentText />,
-        link: 'https://drive.google.com/file/d/1mVlZdM6FapPzhxODwZ50AHqrWGXRU32u/view?usp=sharing',
+        link: 'https://drive.google.com/file/d/1k1mbu7s28bCsQPQ7HxEtquqxoTO9SDAj/view?usp=sharing',
         label: 'Resume',
       },
     ],
@@ -44,11 +44,11 @@ export default function Sidebar() {
       <h1 className="text-5xl font-bold leading-tight">Oleksandr Vlasov</h1>
 
       <h2 className="text-xl mt-3 opacity-80">
-        Aerospace Engineering MSc · QA & Test Automation · Production-Ready Systems
+        Backend Python Developer · Aerospace Engineering MSc · Production-Ready Systems
       </h2>
 
       <p className="mt-6 max-w-xs text-base opacity-80">
-        Exploring:{' '}
+        Building:{' '}
         <span className="font-semibold text-primary dark:text-primaryDark">
           Backend · Cloud · Infrastructure
         </span>

@@ -2,19 +2,15 @@
 import { motion } from 'framer-motion';
 
 const techs = [
-  'QA Automation',
-  'Linux',
   'Python',
+  'FastAPI',
+  'PostgreSQL',
+  'Linux',
   'Docker',
   'CI/CD',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'React Native',
-  'Next.js',
-  'Node.js',
-  'PostgreSQL',
   'AWS',
+  'Typescript',
+  'React',
 ];
 
 export default function TechStack() {
