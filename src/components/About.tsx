@@ -48,11 +48,9 @@ export default function About() {
         <p className="leading-relaxed">
           My background is unusual: I have a Master&apos;s in Aerospace Engineering, experience in
           QA automation at a financial software company, and open source contributions to Fedora.
-          That combination gives me something most junior backend developers don&apos;t have -
-          engineering discipline, a strong testing mindset, and real production experience. I&apos;m
-          now 100% focused on Python backend development and cloud infrastructure. Every project I
-          build, every line of code I write is toward that goal. Currently working on: FastAPI ·
-          PostgreSQL · Docker · CI/CD · AWS · TDD
+          I&apos;m now 100% focused on Python backend development and cloud infrastructure. Every
+          project I build, every line of code I write is toward that goal. Currently working on:
+          FastAPI · PostgreSQL · Docker · CI/CD · AWS · TDD
         </p>
 
         <div className="pl-4 border-l-4 border-primary/30 dark:border-primaryDark/30">
