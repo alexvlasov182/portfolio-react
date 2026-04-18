@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Oleksandr Vlasov - Software Test Engineer',
+  title: 'Oleksandr Vlasov - Backend Python Developer',
   description: 'Portfolio - Oleksandr Vlasov',
   openGraph: {
     type: 'website',
