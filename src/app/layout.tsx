@@ -13,7 +13,7 @@ export const metadata = {
   description: 'Portfolio - Oleksandr Vlasov',
   openGraph: {
     type: 'website',
-    title: 'Oleksandr Vlasov - Software Test Engineer',
+    title: 'Oleksandr Vlasov - Backend Python Developer',
     description: 'Portfolio - Oleksandr Vlasov',
     url: 'https://yourdomain.com',
     siteName: 'Oleksandr Vlasov Portfolio',
