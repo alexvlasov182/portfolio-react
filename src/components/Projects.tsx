@@ -7,7 +7,7 @@ const projects: Project[] = [
   {
     title: 'Robot Payment API',
     description:
-      'Containerized payment API for robot terminals utilizing the Repository pattern and Dependency Injection. Isolated core business logic and enforced strict data validation boundaries. Stack: FastAPI, PostgreSQL, Docker, CI/CD, AWS, EC2, RDS.',
+      'Containerized payment API for robot terminals utilizing the Repository pattern and Dependency Injection. Isolated core business logic and enforced strict data validation boundaries. Stack: FastAPI, PostgreSQL, Docker, CI/CD, AWS, EC2',
     image: '/projects/robot-api.jpg',
     link: 'https://gitlab.com/alexvlasov182/robot-payment',
   },
