@@ -7,9 +7,9 @@ const projects: Project[] = [
   {
     title: 'Robot Payment API',
     description:
-      'RESTful payment API for robot terminals. FastAPI, Pydantic v2 validation, Dockerized, 9 pytest tests covering success and edge cases. Clean feature-based router structure. Stack: FastAPI, Pydantic v2, Docker, pytest, httpx',
+      'Containerized payment API for robot terminals utilizing the Repository pattern and Dependency Injection. Isolated core business logic and enforced strict data validation boundaries. Stack: FastAPI, PostgreSQL, Docker, CI/CD, AWS, EC2, RDS.',
     image: '/projects/robot-api.jpg',
-    link: 'https://gitlab.com/alexvlasov182/rest-api-testing',
+    link: 'https://gitlab.com/alexvlasov182/robot-payment',
   },
   {
     title: 'Fedora i18n Tooling',
