@@ -32,7 +32,7 @@ export default function Sidebar() {
       },
       {
         icon: <IoDocumentText />,
-        link: 'https://drive.google.com/file/d/1k1mbu7s28bCsQPQ7HxEtquqxoTO9SDAj/view?usp=sharing',
+        link: 'https://drive.google.com/file/d/1mTmryOLUjwX1zb8N6B3rY-2Niwpm7WBx/view?usp=sharing',
         label: 'Resume',
       },
     ],
@@ -49,13 +49,13 @@ export default function Sidebar() {
       <h1 className="text-5xl font-bold leading-tight">Oleksandr Vlasov</h1>
 
       <h2 className="text-xl mt-3 opacity-80">
-        Backend Python Developer · Aerospace Engineering MSc · Production-Ready Systems
+        Technical Engineer · Aerospace Engineering MSc · Backend & Infrastructure Background
       </h2>
 
       <p className="mt-6 max-w-xs text-base opacity-80">
-        Building:{' '}
+        Building & learning:{' '}
         <span className="font-semibold text-primary dark:text-primaryDark">
-          Backend · Cloud · Infrastructure
+          Python · Backend · Linux · Automation
         </span>
       </p>
 
@@ -67,9 +67,8 @@ export default function Sidebar() {
             <motion.a
               key={section}
               href={`#${section}`}
-              className={`group flex items-center transition-colors ${
-                isActive ? 'text-accent' : 'hover:text-accent'
-              }`}
+              className={`group flex items-center transition-colors ${isActive ? 'text-accent' : 'hover:text-accent'
+                }`}
             >
               <motion.span
                 animate={{ width: isActive ? 60 : 20 }}
@@ -78,9 +77,8 @@ export default function Sidebar() {
               />
 
               <span
-                className={`ml-4 text-xs font-bold uppercase tracking-widest ${
-                  isActive ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'
-                }`}
+                className={`ml-4 text-xs font-bold uppercase tracking-widest ${isActive ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'
+                  }`}
               >
                 {section}
               </span>

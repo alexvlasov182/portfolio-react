@@ -4,13 +4,16 @@ import { motion } from 'framer-motion';
 const techs = [
   'Python',
   'FastAPI',
-  'PostgreSQL',
   'Linux',
   'Docker',
+  'Git',
   'CI/CD',
-  'AWS',
-  'Typescript',
+  'Automation',
+  'PostgreSQL',
+  'TypeScript',
   'React',
+  'Elektrotechnik und Messtechnik',
+  'Strom und Drehstromzähler Technische Prüfung und Dokumentation'
 ];
 
 export default function TechStack() {

@@ -7,7 +7,7 @@ const projects: Project[] = [
   {
     title: 'Robot Payment API',
     description:
-      'Containerized payment API for robot terminals utilizing the Repository pattern and Dependency Injection. Isolated core business logic and enforced strict data validation boundaries. Stack: FastAPI, PostgreSQL, Docker, CI/CD, AWS, EC2, RDS',
+      'Python/FastAPI backend API for a robot payment terminal. Includes PostgreSQL, Docker, validation, dependency injection and CI/CD.',
     image: '/projects/robot-api.jpg',
     link: 'https://gitlab.com/alexvlasov182/robot-payment',
   },
@@ -18,20 +18,7 @@ const projects: Project[] = [
     image: '/projects/fedora.png',
     link: 'https://www.fedoraproject.org/',
   },
-  {
-    title: 'FlowBoard',
-    description:
-      'Production-ready note-taking API. JWT auth, REST API with Swagger docs, Dockerized with Docker Compose, deployed on AWS EC2. Stack: Node.js, Express, PostgreSQL, Docker, AWS',
-    image: '/projects/flowboard.jpg',
-    link: 'https://flowboard-indol.vercel.app/',
-  },
-  {
-    title: 'RoyalZSoftware',
-    description:
-      'Company site and MDX blog built with Next.js and TypeScript. Production deployment, responsive design. Stack: Next.js, TypeScript',
-    image: '/projects/landing.png',
-    link: 'https://royalzsoftware.de',
-  },
+
 ];
 
 const containerVariants: Variants = {

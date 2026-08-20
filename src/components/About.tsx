@@ -13,11 +13,11 @@ export const slideInLeft = {
 
 export default function About() {
   const points = [
-    'Designing and implementing automated QA workflows',
-    'Reducing manual testing through CI/CD integration',
-    'Ensuring system reliability in Dockerized environments',
-    'Collaborating with developers and DevOps teams to maintain production-ready software',
-    'Full-stack project deployment from design to production-ready systems (React, Node.js, PostgreSQL, Docker, AWS EC2)',
+    'Building backend applications with Python and FastAPI',
+    'Working with PostgreSQL, Docker and Linux',
+    'Developing automated testing and CI/CD workflows',
+    'Deploying and maintaining practical software projects',
+    'Combining software, infrastructure and automation',
   ];
 
   return (
@@ -40,21 +40,21 @@ export default function About() {
         <p className="text-lg leading-relaxed">
           I&apos;m a{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">
-            Backend Python Developer
+            Technical Engineer with an IT background
           </span>{' '}
-          building production-ready APIs and systems with FastAPI, PostgreSQL, and Docker.
+          interested in Python, backend development, Linux and automation.
         </p>
 
         <p className="leading-relaxed">
-          I have a Master&apos;s in Aerospace Engineering, experience in QA automation at a
-          financial software company, and open source contributions to Fedora. I&apos;m now 100%
-          focused on Python backend development and cloud infrastructure. Every project I build,
-          every line of code I write is toward that goal. Currently working on: FastAPI · PostgreSQL
-          · Docker · CI/CD · AWS · TDD
+          I have a Master&apos;s degree in Aerospace Engineering and professional
+          experience in software development and QA automation. I continue to develop
+          my IT skills through practical projects, with a focus on Python, FastAPI,
+          PostgreSQL, Docker and Linux.
         </p>
 
         <div className="pl-4 border-l-4 border-primary/30 dark:border-primaryDark/30">
-          <p className="font-medium mb-2">Proven experience in:</p>
+          <p className="font-medium mb-2">IT experience:</p>
+
           <ul className="space-y-2">
             {points.map((p, i) => (
               <motion.li
@@ -63,7 +63,11 @@ export default function About() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15, duration: 0.6, ease: 'easeOut' }}
+                transition={{
+                  delay: i * 0.15,
+                  duration: 0.6,
+                  ease: 'easeOut',
+                }}
               >
                 <span className="text-primary dark:text-primaryDark mr-2">→</span>
                 {p}
@@ -74,7 +78,7 @@ export default function About() {
 
         <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
           <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-            Open to: Python backend development - Munich or Hybrid
+            Currently learning: Python · Backend · Linux · Automation
           </p>
         </div>
       </motion.div>
