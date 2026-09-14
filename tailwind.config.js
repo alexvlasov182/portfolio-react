@@ -31,7 +31,7 @@ module.exports = {
       },
       borderRadius: { lg: '16px', xl: '20px' },
       boxShadow: { card: '0 6px 30px rgba(2,6,23,0.12)' },
-      maxWidth: { layout: '1280px' },
+      maxWidth: { layout: '1536px' },
     },
   },
   plugins: [],

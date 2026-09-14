@@ -7,26 +7,14 @@ type Experience = { title: string; description: string[]; company: string; city:
 
 const experience: Experience[] = [
   {
-    title: 'Open Source Contributor',
-    company: 'Fedora Project',
-    city: 'Munich, Bavaria, Germany',
-    description: [
-      'Contributed to Fedora web tooling using Vue.js and Node.js',
-      'Developed scripts for RTL language and localization validation',
-      'Implemented translation coverage checks for localization workflows',
-      'Participated in code reviews and open-source collaboration',
-      'Worked with internationalization (i18n) and web infrastructure',
-    ],
-  },
-  {
-    title: 'Junior Developer',
+    title: 'Software Developer',
     company: 'RoyalZSoftware',
     city: 'Weilheim, Bavaria, Germany',
     description: [
-      'Developed web and mobile features using React and React Native',
-      'Implemented Google Maps integration and location-based features',
-      'Built a blog and landing page using MDX',
-      'Improved application stability through testing and UI optimization',
+      'Co-developed a React Native (iOS) app for a platform matching customers with heating and plumbing tradespeople in the Munich area, including Google Maps integration and location-based features',
+      'Built and maintained the company website on Next.js, including a blog system (MDX)',
+      'Independently implemented frontend components from requirements through to release',
+      'Diagnosed and fixed bugs in production; improved application stability through testing',
     ],
   },
   {
@@ -34,11 +22,22 @@ const experience: Experience[] = [
     company: 'QPLIX',
     city: 'Munich, Bavaria, Germany',
     description: [
-      'Developed automated UI testing workflows for financial software',
-      'Reduced manual testing through test automation',
-      'Worked with CI/CD pipelines and automated test execution',
-      'Collaborated with developers on bug investigation and releases',
-      'Worked with test coverage, software quality and system stability',
+      'Built and maintained 50+ automated end-to-end tests with TestCafe (TypeScript) for a wealth-management software platform (FinTech)',
+      'Systematic defect analysis, reproduction, and documentation in close coordination with the development team',
+      'Contributed to release processes and quality sign-offs',
+      'Worked in a regulated environment with high requirements for data quality and stability',
+    ],
+  },
+  {
+    title: 'Open Source Contributor',
+    company: 'Fedora Project',
+    city: 'Munich, Bavaria, Germany',
+    description: [
+      "Built scripts for RTL-language validation and translation-coverage checks for Fedora's web infrastructure",
+      'Helped prevent under-translated locales from reaching production',
+      'Several pull requests successfully merged',
+      'Worked to professional standards: Git workflow, pull requests, code review',
+      'Collaborated with an international, distributed team in English',
     ],
   },
 ];

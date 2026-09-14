@@ -2,18 +2,17 @@
 import { motion } from 'framer-motion';
 
 const techs = [
+  'React',
+  'TypeScript',
+  'Next.js',
   'Python',
   'FastAPI',
-  'Linux',
+  'PostgreSQL',
   'Docker',
   'Git',
   'CI/CD',
   'Automation',
-  'PostgreSQL',
-  'TypeScript',
-  'React',
-  'Elektrotechnik und Messtechnik',
-  'Strom und Drehstromzähler Technische Prüfung und Dokumentation'
+  'Linux',
 ];
 
 export default function TechStack() {

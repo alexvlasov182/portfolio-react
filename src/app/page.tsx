@@ -8,17 +8,19 @@ import TechStack from '@/components/TechStack';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row gap-12 py-20">
-      <aside className="lg:sticky lg:top-20 w-full lg:w-[40%] lg:h-[calc(100vh-5rem)]">
-        <Sidebar />
-      </aside>
+    <div className="max-w-layout mx-auto px-6 lg:px-12">
+      <div className="min-h-screen flex flex-col lg:flex-row gap-12 py-20">
+        <aside className="lg:sticky lg:top-20 w-full lg:w-[40%] lg:h-[calc(100vh-5rem)]">
+          <Sidebar />
+        </aside>
 
-      <main className="w-full lg:w-[60%] space-y-32">
-        <About />
-        <TechStack />
-        <Experience />
-        <Projects />
-      </main>
+        <main className="w-full lg:w-[60%] space-y-32">
+          <About />
+          <TechStack />
+          <Experience />
+          <Projects />
+        </main>
+      </div>
     </div>
   );
 }

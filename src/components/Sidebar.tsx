@@ -32,7 +32,7 @@ export default function Sidebar() {
       },
       {
         icon: <IoDocumentText />,
-        link: 'https://drive.google.com/file/d/1mTmryOLUjwX1zb8N6B3rY-2Niwpm7WBx/view?usp=sharing',
+        link: 'https://drive.google.com/file/d/1Xy57P4AAOq6p9wT9kf6sWvK2HEsOz8mm/view?usp=sharing',
         label: 'Resume',
       },
     ],
@@ -49,13 +49,13 @@ export default function Sidebar() {
       <h1 className="text-5xl font-bold leading-tight">Oleksandr Vlasov</h1>
 
       <h2 className="text-xl mt-3 opacity-80">
-        Technical Engineer · Aerospace Engineering MSc · Backend & Infrastructure Background
+        Software Developer · React & Python · Backend + Frontend
       </h2>
 
       <p className="mt-6 max-w-xs text-base opacity-80">
         Building & learning:{' '}
         <span className="font-semibold text-primary dark:text-primaryDark">
-          Python · Backend · Linux · Automation
+          React · FastAPI · Linux · Automation
         </span>
       </p>
 

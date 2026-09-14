@@ -13,11 +13,11 @@ export const slideInLeft = {
 
 export default function About() {
   const points = [
-    'Building backend applications with Python and FastAPI',
+    'Building React and React Native interfaces with clean component structure',
+    'Building backend APIs with Python and FastAPI',
     'Working with PostgreSQL, Docker and Linux',
     'Developing automated testing and CI/CD workflows',
-    'Deploying and maintaining practical software projects',
-    'Combining software, infrastructure and automation',
+    'Deploying and maintaining full-stack, practical software projects',
   ];
 
   return (
@@ -40,16 +40,19 @@ export default function About() {
         <p className="text-lg leading-relaxed">
           I&apos;m a{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">
-            Technical Engineer with an IT background
+            Software Developer
           </span>{' '}
-          interested in Python, backend development, Linux and automation.
+          working across backend and frontend - Python/FastAPI on the server side,
+          React and React Native on the client side.
         </p>
 
         <p className="leading-relaxed">
-          I have a Master&apos;s degree in Aerospace Engineering and professional
-          experience in software development and QA automation. I continue to develop
-          my IT skills through practical projects, with a focus on Python, FastAPI,
-          PostgreSQL, Docker and Linux.
+          Engineering degree in Metrology and Measurement Technology, plus a
+          postgraduate specialist qualification (thesis in automated
+          parametric-control systems) - alongside three years of professional
+          experience in software development and QA automation. I like building
+          things end-to-end: API design, data modeling, and the UI that sits on
+          top of it - with solid testing and CI/CD around all of it.
         </p>
 
         <div className="pl-4 border-l-4 border-primary/30 dark:border-primaryDark/30">
