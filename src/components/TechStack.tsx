@@ -2,10 +2,10 @@
 import { motion } from 'framer-motion';
 
 const techs = [
+  'Python',
+  'JavaScript',
   'React',
   'TypeScript',
-  'Next.js',
-  'Python',
   'FastAPI',
   'PostgreSQL',
   'Docker',

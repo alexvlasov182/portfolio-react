@@ -13,11 +13,11 @@ export const slideInLeft = {
 
 export default function About() {
   const points = [
-    'Building React and React Native interfaces with clean component structure',
-    'Building backend APIs with Python and FastAPI',
-    'Working with PostgreSQL, Docker and Linux',
-    'Developing automated testing and CI/CD workflows',
-    'Deploying and maintaining full-stack, practical software projects',
+    'Python and backend development (FastAPI, testing)',
+    'Linux, Docker and CI/CD',
+    'Electronics and measurement fundamentals',
+    'Mathematics',
+    'German',
   ];
 
   return (
@@ -38,25 +38,31 @@ export default function About() {
 
       <motion.div className="space-y-4">
         <p className="text-lg leading-relaxed">
-          I&apos;m a{' '}
+          I&apos;m an{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">
-            Software Developer
+            Engineer
           </span>{' '}
-          working across backend and frontend - Python/FastAPI on the server side,
-          React and React Native on the client side.
+          with a background in metrology and measurement technology
+          (Bachelor's degree and a postgraduate specialist qualification).
         </p>
 
         <p className="leading-relaxed">
-          Engineering degree in Metrology and Measurement Technology, plus a
-          postgraduate specialist qualification (thesis in automated
-          parametric-control systems) - alongside three years of professional
-          experience in software development and QA automation. I like building
-          things end-to-end: API design, data modeling, and the UI that sits on
-          top of it - with solid testing and CI/CD around all of it.
+          I worked in
+          web development and QA automation for about two years, and now I learn and
+          build personal projects in my free time, mainly with Python, FastAPI, Docker,
+          Linux and CI/CD.
         </p>
 
+        <p className="leading-relaxed">
+          I'm especially interested in the place where software meets the physical
+          world: measurement, sensors, electronics and automation. This site is where I
+          keep my projects, notes and what I'm learning.
+        </p>
+
+
+
         <div className="pl-4 border-l-4 border-primary/30 dark:border-primaryDark/30">
-          <p className="font-medium mb-2">IT experience:</p>
+          <p className="font-medium mb-2">Currently learning:</p>
 
           <ul className="space-y-2">
             {points.map((p, i) => (
@@ -79,11 +85,11 @@ export default function About() {
           </ul>
         </div>
 
-        <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
+        {/* <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
           <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-            Currently learning: Python · Backend · Linux · Automation
+            Currently learning: Mathematics · Python · Backend · Linux · Automation · German
           </p>
-        </div>
+        </div> */}
       </motion.div>
     </motion.section>
   );

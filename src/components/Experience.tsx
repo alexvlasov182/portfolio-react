@@ -1,15 +1,16 @@
 'use client';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaBuilding } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaBuilding, FaPython, FaCalendar } from 'react-icons/fa';
 import { fadeInUp } from '../lib/microAnimations';
 
-type Experience = { title: string; description: string[]; company: string; city: string };
+type Experience = { title: string; description: string[]; company: string; city: string, date: string };
 
 const experience: Experience[] = [
   {
     title: 'Software Developer',
     company: 'RoyalZSoftware',
     city: 'Weilheim, Bavaria, Germany',
+    date: 'Jul 2024 – Aug 2025, part-time',
     description: [
       'Co-developed a React Native (iOS) app for a platform matching customers with heating and plumbing tradespeople in the Munich area, including Google Maps integration and location-based features',
       'Built and maintained the company website on Next.js, including a blog system (MDX)',
@@ -21,6 +22,7 @@ const experience: Experience[] = [
     title: 'QA Automation Engineer',
     company: 'QPLIX',
     city: 'Munich, Bavaria, Germany',
+    date: 'Sep 2023 – Jun 2024',
     description: [
       'Built and maintained 50+ automated end-to-end tests with TestCafe (TypeScript) for a wealth-management software platform (FinTech)',
       'Systematic defect analysis, reproduction, and documentation in close coordination with the development team',
@@ -32,6 +34,7 @@ const experience: Experience[] = [
     title: 'Open Source Contributor',
     company: 'Fedora Project',
     city: 'Munich, Bavaria, Germany',
+    date: 'Jan 2026 – May 2026',
     description: [
       "Built scripts for RTL-language validation and translation-coverage checks for Fedora's web infrastructure",
       'Helped prevent under-translated locales from reaching production',
@@ -70,6 +73,10 @@ export default function Experience() {
               </span>
               <span className="flex items-center gap-1">
                 <FaMapMarkerAlt /> {exp.city}
+              </span>
+              <span className="flex items-center gap-1">
+                <FaCalendar />
+                {exp.date}
               </span>
             </div>
 

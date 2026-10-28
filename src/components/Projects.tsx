@@ -7,9 +7,9 @@ const projects: Project[] = [
   {
     title: 'QA Automation - QPLIX Wealth Management Platform',
     description:
-      "Tested and stabilized QPLIX's wealth-management reporting platform: multi-currency, multi-language client reports across 350+ performance and risk metrics. Built 50+ automated E2E tests (TestCafe/TS), defect analysis, and release sign-offs in FinTech.",
+      "Quality assurance on a wealth-management reporting platform: wrote and maintained 50+ end-to-end tests (TestCafe, TypeScript), analyzed and documented defects, and contributed to release sign-offs.",
     image: '/projects/qplix.png',
-    link: 'https://www.qplix.com/product/features/reporting-analytics',
+
   },
   {
     title: 'FlowBoard',

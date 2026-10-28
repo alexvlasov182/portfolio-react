@@ -49,13 +49,13 @@ export default function Sidebar() {
       <h1 className="text-5xl font-bold leading-tight">Oleksandr Vlasov</h1>
 
       <h2 className="text-xl mt-3 opacity-80">
-        Software Developer · React & Python · Backend + Frontend
+        Python · Linux · Docker · measurement & automation
       </h2>
 
       <p className="mt-6 max-w-xs text-base opacity-80">
         Building & learning:{' '}
         <span className="font-semibold text-primary dark:text-primaryDark">
-          React · FastAPI · Linux · Automation
+          Mathematics · Python · Linux · Automation
         </span>
       </p>
 
