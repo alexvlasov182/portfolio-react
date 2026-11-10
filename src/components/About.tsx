@@ -1,4 +1,5 @@
 'use client';
+
 import { easeOut, motion } from 'framer-motion';
 import ThemeSwitcher from './ThemeSwitcher';
 
@@ -11,22 +12,21 @@ export const slideInLeft = {
   },
 };
 
-export default function About() {
-  const points = [
-    'Python and backend development (FastAPI, testing)',
-    'Linux, Docker and CI/CD',
-    'Electronics and measurement fundamentals',
-    'Mathematics',
-    'German',
-  ];
+const highlights = [
+  'Built and maintained 50+ automated E2E tests using TestCafe and TypeScript at QPLIX',
+  'Software development experience with React Native and Next.js',
+  'Open-source contributions to Fedora web infrastructure',
+  'Personal API testing projects using Python, FastAPI and PostgreSQL',
+];
 
+export default function About() {
   return (
     <motion.section
       id="about"
       className="scroll-mt-16"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
       variants={slideInLeft}
     >
       <div className="flex items-center justify-between mb-6">
@@ -36,60 +36,61 @@ export default function About() {
         <ThemeSwitcher />
       </div>
 
-      <motion.div className="space-y-4">
+      <motion.div className="space-y-5">
         <p className="text-lg leading-relaxed">
-          I&apos;m an{' '}
+          I&apos;m a{' '}
           <span className="font-semibold text-primary dark:text-primaryDark">
-            Engineer
+            QA Automation Engineer
           </span>{' '}
-          with a background in metrology and measurement technology
-          (Bachelor's degree and a postgraduate specialist qualification).
+          with a background in software development and engineering. I hold a
+          Bachelor&apos;s degree and a postgraduate specialist qualification in
+          Metrology and Measurement Technology.
         </p>
 
         <p className="leading-relaxed">
-          I worked in
-          web development and QA automation for about two years, and now I learn and
-          build personal projects in my free time, mainly with Python, FastAPI, Docker,
-          Linux and CI/CD.
+          At QPLIX, I built and maintained more than 50 automated end-to-end
+          tests using TestCafe and TypeScript for a wealth-management platform.
+          I also have software development experience with React Native and
+          Next.js, and have contributed to Fedora&apos;s open-source tooling.
         </p>
 
         <p className="leading-relaxed">
-          I'm especially interested in the place where software meets the physical
-          world: measurement, sensors, electronics and automation. This site is where I
-          keep my projects, notes and what I'm learning.
+          Alongside my professional experience, I build projects involving API
+          testing, Python, FastAPI, PostgreSQL, Docker and CI/CD. I&apos;m
+          currently expanding my skills in Python test automation and modern
+          testing practices.
         </p>
-
-
 
         <div className="pl-4 border-l-4 border-primary/30 dark:border-primaryDark/30">
-          <p className="font-medium mb-2">Currently learning:</p>
-
-          <ul className="space-y-2">
-            {points.map((p, i) => (
+          <p className="font-medium mb-3">Highlights</p>
+          <ul className="space-y-3">
+            {highlights.map((item, index) => (
               <motion.li
-                key={i}
+                key={item}
                 className="flex items-start"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                  delay: i * 0.15,
-                  duration: 0.6,
+                  delay: index * 0.12,
+                  duration: 0.5,
                   ease: 'easeOut',
                 }}
               >
-                <span className="text-primary dark:text-primaryDark mr-2">→</span>
-                {p}
+                <span className="text-primary dark:text-primaryDark mr-2">
+                  →
+                </span>
+                {item}
               </motion.li>
             ))}
           </ul>
         </div>
 
-        {/* <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
+        <div className="pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
           <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-            Currently learning: Mathematics · Python · Backend · Linux · Automation · German
+            Open to QA Automation Engineer opportunities
           </p>
-        </div> */}
+        </div>
       </motion.div>
     </motion.section>
   );

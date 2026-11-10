@@ -1,21 +1,50 @@
+
 'use client';
+
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaBuilding, FaPython, FaCalendar } from 'react-icons/fa';
+import {
+  FaMapMarkerAlt,
+  FaBuilding,
+  FaCalendar,
+} from 'react-icons/fa';
 import { fadeInUp } from '../lib/microAnimations';
 
-type Experience = { title: string; description: string[]; company: string; city: string, date: string };
+type ExperienceItem = {
+  title: string;
+  company: string;
+  city: string;
+  date: string;
+  category: 'Professional Experience' | 'Open Source';
+  description: string[];
+  featured?: boolean;
+};
 
-const experience: Experience[] = [
+const experience: ExperienceItem[] = [
+  {
+    title: 'Open Source Contributor',
+    company: 'Fedora Project',
+    city: 'Remote',
+    date: 'Jan 2026 – May 2026',
+    category: 'Open Source',
+    description: [
+      "Developed scripts for RTL-language validation and translation-coverage checks for Fedora's web infrastructure",
+      'Helped identify under-translated locales and RTL formatting issues before production',
+      'Contributed multiple successfully merged pull requests',
+      'Collaborated with an international distributed team using Git, pull requests and code reviews',
+    ],
+  },
   {
     title: 'Software Developer',
     company: 'RoyalZSoftware',
     city: 'Weilheim, Bavaria, Germany',
-    date: 'Jul 2024 – Aug 2025, part-time',
+    date: 'Jul 2024 – Aug 2025 · Part-time',
+    category: 'Professional Experience',
     description: [
-      'Co-developed a React Native (iOS) app for a platform matching customers with heating and plumbing tradespeople in the Munich area, including Google Maps integration and location-based features',
-      'Built and maintained the company website on Next.js, including a blog system (MDX)',
-      'Independently implemented frontend components from requirements through to release',
-      'Diagnosed and fixed bugs in production; improved application stability through testing',
+      'Co-developed a React Native iOS application connecting customers with heating and plumbing service providers in the Munich area',
+      'Implemented Google Maps integration and location-based features',
+      'Built and maintained the company website using Next.js, including an MDX-based blog',
+      'Developed frontend components from requirements through implementation and release',
+      'Investigated production bugs and improved application stability',
     ],
   },
   {
@@ -23,24 +52,13 @@ const experience: Experience[] = [
     company: 'QPLIX',
     city: 'Munich, Bavaria, Germany',
     date: 'Sep 2023 – Jun 2024',
+    category: 'Professional Experience',
+    featured: true,
     description: [
-      'Built and maintained 50+ automated end-to-end tests with TestCafe (TypeScript) for a wealth-management software platform (FinTech)',
-      'Systematic defect analysis, reproduction, and documentation in close coordination with the development team',
+      'Built and maintained 50+ automated end-to-end tests using TestCafe and TypeScript for a wealth-management software platform',
+      'Analyzed, reproduced and documented defects in collaboration with the development team',
       'Contributed to release processes and quality sign-offs',
-      'Worked in a regulated environment with high requirements for data quality and stability',
-    ],
-  },
-  {
-    title: 'Open Source Contributor',
-    company: 'Fedora Project',
-    city: 'Munich, Bavaria, Germany',
-    date: 'Jan 2026 – May 2026',
-    description: [
-      "Built scripts for RTL-language validation and translation-coverage checks for Fedora's web infrastructure",
-      'Helped prevent under-translated locales from reaching production',
-      'Several pull requests successfully merged',
-      'Worked to professional standards: Git workflow, pull requests, code review',
-      'Collaborated with an international, distributed team in English',
+      'Worked in a FinTech environment with strong requirements for data quality and software reliability',
     ],
   },
 ];
@@ -52,37 +70,62 @@ export default function Experience() {
         className="text-3xl font-bold mb-8"
         initial="hidden"
         whileInView="visible"
+        viewport={{ once: true }}
         variants={fadeInUp}
       >
         Experience
       </motion.h2>
-      <ul className="space-y-8">
-        {experience.map((exp) => (
+
+      <ul className="space-y-6">
+        {experience.map((exp, index) => (
           <motion.li
-            key={exp.title}
-            className="card hover:scale-[1.03] hover:shadow-xl transition-transform duration-300"
+            key={`${exp.company}-${exp.title}`}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
             variants={fadeInUp}
+            transition={{ delay: index * 0.08 }}
+            className={`card transition-all duration-300 hover:shadow-xl ${exp.featured
+                ? 'border-l-4 border-primary dark:border-primaryDark'
+                : ''
+              }`}
           >
-            <h3 className="text-xl font-semibold mb-1">{exp.title}</h3>
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary dark:text-primaryDark">
+                {exp.category}
+              </span>
 
-            <div className="flex items-center gap-4 text-sm text-mutedLight dark:text-mutedDark mb-2">
-              <span className="flex items-center gap-1">
-                <FaBuilding /> {exp.company}
+              {exp.featured && (
+                <span className="text-xs font-semibold text-primary dark:text-primaryDark">
+                  Key QA Experience
+                </span>
+              )}
+            </div>
+
+            <h3 className="text-xl font-semibold mb-2">
+              {exp.title}
+            </h3>
+
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-mutedLight dark:text-mutedDark mb-4">
+              <span className="flex items-center gap-2">
+                <FaBuilding aria-hidden="true" />
+                {exp.company}
               </span>
-              <span className="flex items-center gap-1">
-                <FaMapMarkerAlt /> {exp.city}
+
+              <span className="flex items-center gap-2">
+                <FaMapMarkerAlt aria-hidden="true" />
+                {exp.city}
               </span>
-              <span className="flex items-center gap-1">
-                <FaCalendar />
+
+              <span className="flex items-center gap-2">
+                <FaCalendar aria-hidden="true" />
                 {exp.date}
               </span>
             </div>
 
-            <ul className="list-disc list-inside space-y-1 text-sm leading-relaxed">
-              {exp.description.map((item, idx) => (
-                <li key={idx}>{item}</li>
+            <ul className="list-disc list-inside space-y-2 text-sm leading-relaxed">
+              {exp.description.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </motion.li>

@@ -3,70 +3,74 @@
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaGitlab } from 'react-icons/fa';
 import { IoDocumentText } from 'react-icons/io5';
-import { useMemo } from 'react';
 import useActiveSection from '../hooks/useActiveSection';
 
-const sections = ['about', 'tech-stack', 'experience', 'projects'] as const;
-type Section = (typeof sections)[number];
+const sections = [
+  { id: 'about', label: 'About' },
+  { id: 'tech-stack', label: 'Tech Stack' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+];
+
+const sectionIds = sections.map((section) => section.id);
+
+const socialLinks = [
+  {
+    icon: <FaGitlab />,
+    href: 'https://gitlab.com/alexvlasov182',
+    label: 'GitLab profile',
+  },
+  {
+    icon: <FaGithub />,
+    href: 'https://github.com/alexvlasov182',
+    label: 'GitHub profile',
+  },
+  {
+    icon: <FaLinkedin />,
+    href: 'https://www.linkedin.com/in/oleksandr-vlasov-9969ab19b/',
+    label: 'LinkedIn profile',
+  },
+  {
+    icon: <IoDocumentText />,
+    href: 'https://drive.google.com/file/d/1Xy57P4AAOq6p9wT9kf6sWvK2HEsOz8mm/view?usp=sharing',
+    label: 'Resume',
+  },
+];
 
 export default function Sidebar() {
-  // Convert readonly tuple to mutable string[] for the hook
-  const active = useActiveSection([...sections] as string[]);
-
-  const socialLinks = useMemo(
-    () => [
-      {
-        icon: <FaGitlab />,
-        link: 'https://gitlab.com/dashboard/home',
-        label: 'GitLab profile',
-      },
-      {
-        icon: <FaGithub />,
-        link: 'https://github.com/alexvlasov182',
-        label: 'GitHub profile',
-      },
-      {
-        icon: <FaLinkedin />,
-        link: 'https://www.linkedin.com/in/oleksandr-vlasov-9969ab19b/',
-        label: 'LinkedIn profile',
-      },
-      {
-        icon: <IoDocumentText />,
-        link: 'https://drive.google.com/file/d/1Xy57P4AAOq6p9wT9kf6sWvK2HEsOz8mm/view?usp=sharing',
-        label: 'Resume',
-      },
-    ],
-    [],
-  );
+  const active = useActiveSection([...sectionIds]);
 
   return (
-    <motion.aside
+    <motion.div
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
       className="flex flex-col"
     >
-      <h1 className="text-5xl font-bold leading-tight">Oleksandr Vlasov</h1>
+      <h1 className="text-5xl font-bold leading-tight">
+        Oleksandr Vlasov
+      </h1>
 
       <h2 className="text-xl mt-3 opacity-80">
-        Python · Linux · Docker · measurement & automation
+        QA Automation Engineer
       </h2>
 
       <p className="mt-6 max-w-xs text-base opacity-80">
-        Building & learning:{' '}
-        <span className="font-semibold text-primary dark:text-primaryDark">
-          Mathematics · Python · Linux · Automation
-        </span>
+        Test Automation · TypeScript · Python · Linux · Docker
       </p>
 
-      <nav className="mt-14 flex flex-col gap-4" aria-label="Section navigation">
+      <nav
+        className="mt-14 flex flex-col gap-4"
+        aria-label="Section navigation"
+      >
         {sections.map((section) => {
-          const isActive = active === section;
+          const isActive = active === section.id;
 
           return (
             <motion.a
-              key={section}
-              href={`#${section}`}
+              key={section.id}
+              href={`#${section.id}`}
+              aria-current={isActive ? 'location' : undefined}
               className={`group flex items-center transition-colors ${isActive ? 'text-accent' : 'hover:text-accent'
                 }`}
             >
@@ -77,10 +81,12 @@ export default function Sidebar() {
               />
 
               <span
-                className={`ml-4 text-xs font-bold uppercase tracking-widest ${isActive ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'
+                className={`ml-4 text-xs font-bold uppercase tracking-widest ${isActive
+                    ? 'opacity-100'
+                    : 'opacity-70 group-hover:opacity-100'
                   }`}
               >
-                {section}
+                {section.label}
               </span>
             </motion.a>
           );
@@ -88,19 +94,20 @@ export default function Sidebar() {
       </nav>
 
       <div className="mt-10 flex gap-4">
-        {socialLinks.map(({ icon, link, label }) => (
+        {socialLinks.map(({ icon, href, label }) => (
           <a
             key={label}
-            href={link}
+            href={href}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
+            title={label}
             className="text-2xl hover:text-accent transition-colors"
           >
             {icon}
           </a>
         ))}
       </div>
-    </motion.aside>
+    </motion.div>
   );
 }
