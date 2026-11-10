@@ -32,7 +32,7 @@ const socialLinks = [
   },
   {
     icon: <IoDocumentText />,
-    href: 'https://drive.google.com/file/d/1Xy57P4AAOq6p9wT9kf6sWvK2HEsOz8mm/view?usp=sharing',
+    href: 'https://drive.google.com/file/d/1cqvSwDJLDetRGUvDl0J_u_JXBfJ6JJ3k/view?usp=sharing',
     label: 'Resume',
   },
 ];
@@ -82,8 +82,8 @@ export default function Sidebar() {
 
               <span
                 className={`ml-4 text-xs font-bold uppercase tracking-widest ${isActive
-                    ? 'opacity-100'
-                    : 'opacity-70 group-hover:opacity-100'
+                  ? 'opacity-100'
+                  : 'opacity-70 group-hover:opacity-100'
                   }`}
               >
                 {section.label}
